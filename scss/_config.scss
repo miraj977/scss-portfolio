@@ -33,3 +33,32 @@ $bg-opacity: 0.9;
     }
   }
 }
+
+//Media Query Mixins
+//Widescreens
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+//Desktop & Laptops
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+//Tablets & Small Screens
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+//Mobile
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
