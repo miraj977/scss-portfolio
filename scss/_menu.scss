@@ -1,0 +1,46 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include ease-out;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background-color: #fff;
+    @include ease-out;
+  }
+
+  //Rotate the menu button to X sign
+
+  &.close {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+
+    .btn-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        -webkit-transform: rotate(45deg) translate(5px, 5px);
+        -moz-transform: rotate(45deg) translate(5px, 5px);
+        -ms-transform: rotate(45deg) translate(5px, 5px);
+        -o-transform: rotate(45deg) translate(5px, 5px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+        -webkit-transform: rotate(-45deg) translate(7px, -6px);
+        -moz-transform: rotate(-45deg) translate(7px, -6px);
+        -ms-transform: rotate(-45deg) translate(7px, -6px);
+        -o-transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
