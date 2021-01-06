@@ -80,6 +80,8 @@ main {
   }
 }
 
+//ABout
+
 .about-info {
   display: grid;
   grid-template-areas:
@@ -119,6 +121,23 @@ main {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+  }
+}
+
+//WOrk
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    @include ease-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 
